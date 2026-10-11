@@ -1,0 +1,6 @@
+﻿# Generated from recognizable imports.
+# Review this list against the script before installing.
+beautifulsoup4
+openpyxl
+pandas
+selenium

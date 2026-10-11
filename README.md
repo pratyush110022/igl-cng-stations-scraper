@@ -1,28 +1,71 @@
-﻿# Indraprastha Gas Limited (IGL) Scraper
+﻿# IGL CNG Stations Scraper
 
-Python project for collecting or processing IGL-related station data.
+Python automation project for collecting or processing IGL-related station data.
 
-## Project File
+## Overview
 
-- `Indraprastha_Gas_Limited_IGL.py` — main Python script
+This repository contains the Python script used for the project.
+The actual collection methods, geographic coverage, and output depend
+on the implementation and source availability.
+
+## Features
+
+- Python-based station data processing
+- Automation of the workflow implemented in the script
+
+## Technology Stack
+
+- Python
+- Data collection and processing
+- Structured data handling
+- Excel integration, where supported by the script
+
+## Repository Structure
+
+```
+igl-cng-stations-scraper/
+|-- Indraprastha_Gas_Limited_IGL.py
+|-- README.md
+|-- requirements.txt
+|-- .gitignore
+```
 
 ## Setup
 
-Create a virtual environment:
+Use Python 3.10 or a compatible version supported by the script.
 
-    python -m venv .venv
-    .venv\Scripts\Activate.ps1
+Create and activate a virtual environment:
 
-Install the dependencies required by the script.
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
 
-Review the imports and install the relevant packages using pip.
+Install dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
 
 ## Run
 
-    python Indraprastha_Gas_Limited_IGL.py
+```powershell
+python "Indraprastha_Gas_Limited_IGL.py"
+```
 
-## Notes
+Review the script configuration before running it. If authentication
+is required, use authorized credentials and keep secrets outside
+the source code.
 
-Actual functionality and data coverage depend on the script
-implementation and source availability. Follow applicable API
-terms and permissions.
+## Data and Usage Notes
+
+- Data completeness depends on the source and collection process.
+- Check the source provider's terms and permissions.
+- Do not publish confidential data or credentials.
+- Treat collected data as a snapshot unless freshness is verified.
+
+## Author
+
+**Pratyush Das**
+
+GitHub: https://github.com/pratyush110022
