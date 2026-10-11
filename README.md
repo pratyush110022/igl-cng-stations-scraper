@@ -56,3 +56,7 @@ The script uses ordinary Chrome (visible by default) and saves output in the cur
 - The scraper processes only the first two tables found on each configured area page.
 - If no data is found, inspect the diagnostics folders; the site's structure may have changed or an area page may have failed to load.
 - Respect source-site terms and applicable policies when collecting or redistributing data.
+
+## Synthetic sample data
+
+[`sample_synthetic_12_records.csv`](sample_synthetic_12_records.csv) contains **12 synthetic test records** using the scraper's output schema. These records were generated for schema inspection and portfolio/demo purposes; they were not collected from the source website or API. Names and addresses are fictional, contact details and example.com links are placeholders, coordinates are illustrative, and ratings/prices are not real or current. Do not use them for real-world navigation or pricing decisions.
