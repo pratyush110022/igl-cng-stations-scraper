@@ -1,71 +1,58 @@
-﻿# IGL CNG Stations Scraper
+# IGL CNG Outlet Data Scraper
 
-Python automation project for collecting or processing IGL-related station data.
+Selenium-based Python automation that visits configured IGL outlet pages, extracts data from the first two HTML tables on each page, consolidates the results, and creates a multi-sheet Excel workbook.
 
-## Overview
+## How it works
 
-This repository contains the Python script used for the project.
-The actual collection methods, geographic coverage, and output depend
-on the implementation and source availability.
+1. Opens the IGL website in a visible Chrome browser.
+2. Visits each entry in the script's configured AREAS list.
+3. Waits for the rendered page and its tables, then parses the HTML with BeautifulSoup.
+4. Processes up to the first two tables on each page. Rows are classified as CNG Station when the headers contain Phone Number, as OMC Outlet when they contain OMC, or otherwise as a numbered table.
+5. Adds area/table/source metadata, combines the records, removes blank station names and duplicate rows, and creates summary/log sheets.
 
-## Features
+## Output workbook
 
-- Python-based station data processing
-- Automation of the workflow implemented in the script
+The script writes IGL_CNG_Stations_All_Areas.xlsx with three sheets:
 
-## Technology Stack
+- All_CNG_Stations — combined records with available source columns plus Area, Table_Type, and Source_URL
+- Scrape_Log — per-area success/failure status, record counts, and error text
+- Summary — total areas, successful/empty areas, records, and duplicates removed
 
-- Python
-- Data collection and processing
-- Structured data handling
-- Excel integration, where supported by the script
+The workbook is formatted with a frozen header row, filters, and adjusted column widths.
 
-## Repository Structure
+## Diagnostics
 
-```
-igl-cng-stations-scraper/
-|-- Indraprastha_Gas_Limited_IGL.py
-|-- README.md
-|-- requirements.txt
-|-- .gitignore
-```
+- IGL_Debug_HTML/ — rendered page HTML saved for each configured area
+- IGL_Debug_Screenshots/ — screenshots saved when an area fails
 
-## Setup
+These diagnostics help inspect changes in the source page or selector behavior.
 
-Use Python 3.10 or a compatible version supported by the script.
+## Requirements
 
-Create and activate a virtual environment:
+- Python 3.10 or a compatible version
+- Packages in requirements.txt
+- Google Chrome installed and compatible with Selenium WebDriver
 
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
+## Setup and run
 
-Install dependencies:
+    python -m venv .venv
+    .venv/Scripts/Activate.ps1
+    pip install -r requirements.txt
+    python Indraprastha_Gas_Limited_IGL.py
 
-```powershell
-pip install -r requirements.txt
-```
+## Configuration
 
-## Run
+Review the following values in Indraprastha_Gas_Limited_IGL.py:
 
-```powershell
-python "Indraprastha_Gas_Limited_IGL.py"
-```
+- BASE_URL — source website
+- AREAS — the fixed list of outlet pages the script visits
+- OUTPUT_FILE — workbook name
+- WAIT_TIME and PAGE_DELAY — page wait and pacing settings
 
-Review the script configuration before running it. If authentication
-is required, use authorized credentials and keep secrets outside
-the source code.
+The script uses ordinary Chrome (visible by default) and saves output in the current working directory.
 
-## Data and Usage Notes
+## Notes
 
-- Data completeness depends on the source and collection process.
-- Check the source provider's terms and permissions.
-- Do not publish confidential data or credentials.
-- Treat collected data as a snapshot unless freshness is verified.
-
-## Author
-
-**Pratyush Das**
-
-GitHub: https://github.com/pratyush110022
+- The scraper processes only the first two tables found on each configured area page.
+- If no data is found, inspect the diagnostics folders; the site's structure may have changed or an area page may have failed to load.
+- Respect source-site terms and applicable policies when collecting or redistributing data.
