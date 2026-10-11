@@ -1,0 +1,13 @@
+Area,Table_Type,S.No,Station Name,Address,Phone Number,OMC,Source_URL
+Synthetic Area A,CNG Station,1,Synthetic IGL Outlet 01,"Synthetic Test Road 01, Test District",0000000000,,https://example.com/igl/area-01
+Synthetic Area B,OMC Outlet,2,Synthetic IGL Outlet 02,"Synthetic Test Road 02, Test District",0000000000,Synthetic OMC B,https://example.com/igl/area-02
+Synthetic Area C,Table 2,3,Synthetic IGL Outlet 03,"Synthetic Test Road 03, Test District",0000000000,,https://example.com/igl/area-03
+Synthetic Area D,CNG Station,4,Synthetic IGL Outlet 04,"Synthetic Test Road 04, Test District",0000000000,,https://example.com/igl/area-04
+Synthetic Area A,OMC Outlet,5,Synthetic IGL Outlet 05,"Synthetic Test Road 05, Test District",0000000000,Synthetic OMC A,https://example.com/igl/area-01
+Synthetic Area B,Table 2,6,Synthetic IGL Outlet 06,"Synthetic Test Road 06, Test District",0000000000,,https://example.com/igl/area-02
+Synthetic Area C,CNG Station,7,Synthetic IGL Outlet 07,"Synthetic Test Road 07, Test District",0000000000,,https://example.com/igl/area-03
+Synthetic Area D,OMC Outlet,8,Synthetic IGL Outlet 08,"Synthetic Test Road 08, Test District",0000000000,Synthetic OMC D,https://example.com/igl/area-04
+Synthetic Area A,Table 2,9,Synthetic IGL Outlet 09,"Synthetic Test Road 09, Test District",0000000000,,https://example.com/igl/area-01
+Synthetic Area B,CNG Station,10,Synthetic IGL Outlet 10,"Synthetic Test Road 10, Test District",0000000000,,https://example.com/igl/area-02
+Synthetic Area C,OMC Outlet,11,Synthetic IGL Outlet 11,"Synthetic Test Road 11, Test District",0000000000,Synthetic OMC C,https://example.com/igl/area-03
+Synthetic Area D,Table 2,12,Synthetic IGL Outlet 12,"Synthetic Test Road 12, Test District",0000000000,,https://example.com/igl/area-04
